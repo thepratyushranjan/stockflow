@@ -15,6 +15,28 @@ StockFlow is a full-stack Inventory & Order Management System built with React, 
 - **Package Manager:** [uv](https://github.com/astral-sh/uv)
 - **Containerization:** Docker, Docker Compose
 
+## 🏗️ System Architecture
+
+The application follows a modern three-tier architecture, fully containerized for consistency across environments.
+
+```mermaid
+graph TD
+    Client([Client Browser]) -->|HTTP/HTTPS| Frontend[React Frontend]
+    Frontend -->|REST API| Backend[FastAPI Backend]
+    Backend -->|SQLAlchemy ORM| DB[(PostgreSQL + pgvector)]
+    
+    subgraph Docker Network
+        Frontend
+        Backend
+        DB
+    end
+```
+
+**Components:**
+1. **Frontend:** A React application (built with Vite) that provides a responsive user interface for inventory and order management.
+2. **Backend:** A FastAPI service handling business logic, order calculations, stock validation, and API requests.
+3. **Database:** PostgreSQL used for persistent data storage, with `pgvector` enabled. Alembic manages all schema migrations.
+
 ---
 
 ## 🚀 Getting Started (The Easiest Way)
