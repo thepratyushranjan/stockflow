@@ -3,7 +3,7 @@ services:
     name: stockflow-backend
     env: image
     image:
-      url: docker.io/pratyush2000/stock:backend-19062026V1
+      url: docker.io/pratyush2000/stock:backend-19062026V2
     region: oregon
     plan: free
     envVars:

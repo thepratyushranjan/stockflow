@@ -8,10 +8,10 @@ class Settings(BaseSettings):
     VERSION: str = "0.1.0"
     
     # CORS Configuration
-    BACKEND_CORS_ORIGINS: list[str] = ["http://localhost:3000", "http://localhost:8000"]
+    BACKEND_CORS_ORIGINS: list[str] = ["*"]
     
     # Trusted Hosts Configuration
-    ALLOWED_HOSTS: list[str] = ["localhost", "127.0.0.1"]
+    ALLOWED_HOSTS: list[str] = ["*"]
     
     # Postgres Database Configuration
     POSTGRES_SERVER: str = "localhost"
