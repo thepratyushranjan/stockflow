@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from core.config import settings
 from core.lifespan import lifespan
 from core.middleware import setup_middleware
+from routers.products import router as products_router
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -12,6 +13,9 @@ app = FastAPI(
 
 # Setup middleware
 setup_middleware(app)
+
+# Include routers
+app.include_router(products_router)
 
 
 @app.get("/")
