@@ -2,6 +2,12 @@
 
 StockFlow is a full-stack Inventory & Order Management System built with React, FastAPI, and PostgreSQL. It helps businesses manage products, customers, orders, and inventory with automated stock tracking, order calculations, and validation. Fully containerized with Docker and Docker Compose for seamless development and deployment.
 
+## 🌍 Live Demo
+- **Frontend (Netlify):** [https://stockflow69.netlify.app/](https://stockflow69.netlify.app/)
+- **Backend API Docs (Swagger UI):** [https://stockflow-backend-xbwt.onrender.com/docs](https://stockflow-backend-xbwt.onrender.com/docs)
+- **Backend Base URL:** [https://stockflow-backend-xbwt.onrender.com](https://stockflow-backend-xbwt.onrender.com)
+- **Docker Hub Image:** `https://hub.docker.com/repository/docker/pratyush2000/stock/general`
+
 ## Tech Stack
 - **Backend:** FastAPI, Python 3.12+
 - **Database:** PostgreSQL (pgvector)
