@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: stockflow-backend
+    env: image
+    image:
+      url: docker.io/pratyush2000/stock:backend-19062026V1
+    region: oregon
+    plan: free
+    envVars:
+      # Map Render's managed database credentials to your app's environment variables
+      - key: POSTGRES_SERVER
+        fromDatabase:
+          name: stockflow-db
+          property: host
+      - key: POSTGRES_USER
+        fromDatabase:
+          name: stockflow-db
+          property: user
+      - key: POSTGRES_PASSWORD
+        fromDatabase:
+          name: stockflow-db
+          property: password
+      - key: POSTGRES_DB
+        fromDatabase:
+          name: stockflow-db
+          property: database
+      - key: POSTGRES_PORT
+        fromDatabase:
+          name: stockflow-db
+          property: port
+
+databases:
+  - name: stockflow-db
+    plan: free
+    region: oregon
+    postgresMajorVersion: 16 # pgvector is supported by default in Render Postgres
