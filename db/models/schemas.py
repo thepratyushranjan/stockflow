@@ -65,3 +65,11 @@ class OrderResponse(BaseModel):
     created_at: datetime
     items: List[OrderItemResponse]
     model_config = ConfigDict(from_attributes=True)
+
+
+# DASHBOARD SCHEMA
+class DashboardResponse(BaseModel):
+    total_products: int
+    total_customers: int
+    total_orders: int
+    low_stock_products: List[ProductResponse]

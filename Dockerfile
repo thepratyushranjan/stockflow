@@ -13,7 +13,7 @@ COPY . .
 RUN uv sync --frozen
 
 # Expose the application port
-EXPOSE 8061
+EXPOSE 8000
 
 # Run the application
-CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8061"]
+CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
