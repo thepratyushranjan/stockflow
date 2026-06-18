@@ -6,13 +6,6 @@ from core.config import settings
 
 
 def setup_middleware(app: FastAPI) -> None:
-    """
-    Configure middleware for the FastAPI application.
-    
-    Args:
-        app: FastAPI application instance
-    """
-    # CORS Middleware - Handle Cross-Origin Resource Sharing
     app.add_middleware(
         CORSMiddleware,
         allow_origins=settings.BACKEND_CORS_ORIGINS,
