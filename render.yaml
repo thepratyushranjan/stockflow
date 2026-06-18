@@ -28,6 +28,10 @@ services:
         fromDatabase:
           name: stockflow-db
           property: port
+      - key: ALLOWED_HOSTS
+        value: '["*"]'
+      - key: BACKEND_CORS_ORIGINS
+        value: '["*"]'
 
 databases:
   - name: stockflow-db
